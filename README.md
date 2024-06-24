@@ -39,23 +39,35 @@ I pre-rendered 4 different animations:
 Whenever a text prompt is submitted, we ask Chatgpt which one of these 4 animations is most suitable. We then convert the text to speech, and put the audio over the corresponding animation.
 
 ## Steps to run the code:
-1. **Create a conda environment**
+1. **Clone the repo**
+```
+git clone https://github.com/zaidmehdi/minecraft-blender-animation.git
+```
+2. **CD into the directory**
+```
+cd minecraft-blender-animation/
+```
+3. **Create a .env file populated with your Openai API key**
+```
+OPENAI_API_KEY=<your_key_here>
+```
+4. **Create a conda environment**
 ```
 conda create -n mcblender python=3.12.4
 ```
-2. **Activate the environment**
+5. **Activate the environment**
 ```
 conda activate mcblender
 ```
-3. **Install dependencies**
+6. **Install dependencies**
 ```
 pip install -r requirements.txt
 ```
-4. **Run the Flask app**
+7. **Run the Flask app**
 ```
 python src/main.py
 ```
-5. **Open index.html**
+8. **Open index.html**
 ```
 open index.html
 ```
