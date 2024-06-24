@@ -11,7 +11,6 @@ def get_animation():
     """Return the full animation of the minecraft character with the audio"""
 
     text = request.json.get("text")
-
     animation_type = get_animation_type(text)
     video_path = get_video_path(animation_type)
     audio_path = text_to_speech(text)

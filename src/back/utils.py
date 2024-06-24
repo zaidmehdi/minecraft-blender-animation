@@ -18,17 +18,18 @@ def text_to_speech(text):
     return str(speech_file_path)
 
 
-def prompt_gpt(client, history, prompt):
+def prompt_gpt(client, history, prompt, temperature=1):
     """Send a prompt to openai's gpt model"""
 
     history.append(prompt)
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        messages= history
+        messages= history,
+        temperature=temperature
     )
     content = response.choices[0].message.content
 
-    return content
+    return content[0]
 
 
 def get_animation_type(text):
