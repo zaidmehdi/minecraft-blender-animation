@@ -16,7 +16,7 @@ I pre-rendered 4 different animations:
     <td>
       <figure>
         <img src="https://github.com/zaidmehdi/minecraft-blender-animation/assets/122180508/31387688-20ec-45d9-b3b9-fac104adad25" alt="Second Animation" width="320" />
-        <figcaption>2. Pointing a finger at something</figcaption>
+        <figcaption>2. Pointing finger</figcaption>
       </figure>
     </td>
   </tr>
@@ -30,11 +30,13 @@ I pre-rendered 4 different animations:
     <td>
       <figure>
         <img src="https://github.com/zaidmehdi/minecraft-blender-animation/assets/122180508/aa565409-79a3-4dc6-b742-f5fda6d3cdbf" alt="Fourth Animation" width="320" />
-        <figcaption>4. Catching one's breath</figcaption>
+        <figcaption>4. Catching breath</figcaption>
       </figure>
     </td>
   </tr>
 </table>
+  
+Whenever a text prompt is submitted, we ask Chatgpt which one of these 4 animations is most suitable. We then convert the text to speech, and put the audio over the corresponding animation.
 
 ## Steps to run the code:
 1. **Create a conda environment**
