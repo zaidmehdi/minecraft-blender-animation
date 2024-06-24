@@ -1,0 +1,3 @@
+# Ignore all files here. This directory is to store the audio output
+*
+!.gitignore
