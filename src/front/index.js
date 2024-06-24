@@ -8,7 +8,7 @@ document.getElementById("textForm").addEventListener("submit", function(event) {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
-                document.getElementById("output").innerText = response.message;
+                displayVideo(response.video_path);
             } else {
                 console.error("Error:", xhr.status);
             }
@@ -16,3 +16,11 @@ document.getElementById("textForm").addEventListener("submit", function(event) {
     };
     xhr.send(JSON.stringify({ text: userInput }));
 });
+
+
+function displayVideo(videoPath) {
+    var videoPlayer = document.getElementById("videoPlayer");
+    videoPlayer.src = videoPath;
+    videoPlayer.controls = true;
+    videoPlayer.autoplay = true;
+}

@@ -55,3 +55,21 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
 }
+
+
+.video-container {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
