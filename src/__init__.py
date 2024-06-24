@@ -13,11 +13,8 @@ def create_app():
     CORS(app)
 
     load_dotenv(".env")
-    load_dotenv(".flaskenv")
 
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
-
-    app.config['PORT'] = os.getenv("FLASK_PORT_PROD")
     app.config["DEBUG"] = True
 
     openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
