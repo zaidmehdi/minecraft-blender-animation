@@ -21,4 +21,4 @@ def get_animation():
     return jsonify({
         "success": True,
         "video_path": output_path
-    }), 201
+    }), 200
