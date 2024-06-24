@@ -59,3 +59,7 @@ python src/main.py
 ```
 open index.html
 ```
+
+## Acknowlegements:
+I got the minecraft rig from:  
+https://sketchfab.com/3d-models/the-perfect-steve-rigged-0cffc39bdab04551bde4f8cdfbc52eca
