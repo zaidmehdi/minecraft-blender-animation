@@ -1,5 +1,6 @@
-from pathlib import Path
 from flask import current_app
+from moviepy.editor import VideoFileClip, AudioFileClip, concatenate_videoclips
+from pathlib import Path
 
 
 def text_to_speech(text):
@@ -60,7 +61,21 @@ def get_video_path(animation_type):
     return video_map[animation_type]
 
 
-def get_audio_length(audio_path):
+def assemble_video(video_path, audio_path, output_path="output_video.mp4"):
+    """Put the video and audio together and makes video loop if audio is longer"""
 
-    return
+    video_clip = VideoFileClip(video_path)
+    audio_clip = AudioFileClip(audio_path)
 
+    num_repeats = int(audio_clip.duration / video_clip.duration) + 1
+    
+    video_clips = [video_clip] * num_repeats
+    
+    final_video_clip = concatenate_videoclips(video_clips)
+    final_video_clip = final_video_clip.set_audio(audio_clip)
+
+    final_video_clip.write_videofile(output_path, codec='libx264', audio_codec='aac')
+    final_video_clip.close()
+    audio_clip.close()
+
+    return output_path
