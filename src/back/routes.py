@@ -1,19 +1,22 @@
 from flask import Blueprint, jsonify, request
 
-from back.speech import text_to_speech
+from back.utils import get_animation_type, get_video_path, text_to_speech, get_audio_length
 
 
 routes_bp = Blueprint("routes", __name__)
 
 
-@routes_bp.route("/speech", methods=["POST"])
-def get_audio():
-    """When a user submits a prompt, get the corresponding audio"""
+@routes_bp.route("/animate", methods=["POST"])
+def get_animation():
+    """Return the full animation of the minecraft character with the audio"""
 
     text = request.json.get("text")
-    audio_path = text_to_speech(text)
+
+    animation_type = get_animation_type(text)
+    video_path = get_video_path(animation_type)
+    print("video_path", video_path)
 
     return jsonify({
         "success": True,
-        "audio_path": str(audio_path)
+        "video_path": video_path
     }), 201
