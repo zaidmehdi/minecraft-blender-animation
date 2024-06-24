@@ -14,9 +14,6 @@ def create_app():
 
     load_dotenv(".env")
 
-    app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
-    app.config["DEBUG"] = True
-
     openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     with app.app_context():

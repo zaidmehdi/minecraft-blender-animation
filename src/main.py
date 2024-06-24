@@ -10,7 +10,7 @@ def main():
     app = create_app()
     app.register_blueprint(routes_bp)
     
-    app.run(host="0.0.0.0", port=app.config["PORT"], debug=app.config["DEBUG"])
+    app.run(host="0.0.0.0", debug=True)
     
 
 if __name__ == "__main__":
