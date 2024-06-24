@@ -1,6 +1,41 @@
 # Minecraft Blender Animation
 Turning text prompts into minecraft animated videos.
 
+## How it works:
+I pre-rendered 4 different animations:
+
+
+<table>
+  <tr>
+    <td>
+      <figure>
+        <img src="https://github.com/zaidmehdi/minecraft-blender-animation/assets/122180508/94c3e786-44ad-435a-af7e-f253987280f3" alt="First Animation" width="320" />
+        <figcaption>1. Waving Hello</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="https://github.com/zaidmehdi/minecraft-blender-animation/assets/122180508/31387688-20ec-45d9-b3b9-fac104adad25" alt="Second Animation" width="320" />
+        <figcaption>2. Pointing a finger at something</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure>
+        <img src="https://github.com/zaidmehdi/minecraft-blender-animation/assets/122180508/5ab7a086-7d5a-4e0e-aed4-84f1c852e466" alt="Third Animation" width="320" />
+        <figcaption>3. Shrugging</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="https://github.com/zaidmehdi/minecraft-blender-animation/assets/122180508/aa565409-79a3-4dc6-b742-f5fda6d3cdbf" alt="Fourth Animation" width="320" />
+        <figcaption>4. Catching one's breath</figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
 ## Steps to run the code:
 1. **Create a conda environment**
 ```
@@ -22,48 +57,3 @@ python src/main.py
 ```
 open index.html
 ```
-
-## How it works:
-I pre-rendered 4 different animations:
-
-<style>
-  .video-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .video-item {
-    flex: 1 1 50%;
-    padding: 10px;
-  }
-  video {
-    width: 100%;
-    height: auto;
-  }
-</style>
-
-<div class="video-container">
-  <div class="video-item">
-    <video controls>
-      <source src="renders/wave_hi.mkv" type="video/x-matroska">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="video-item">
-    <video controls>
-      <source src="renders/point_finger.mkv" type="video/x-matroska">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="video-item">
-    <video controls>
-      <source src="renders/shrug.mkv" type="video/x-matroska">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="video-item">
-    <video controls>
-      <source src="renders/tired.mkv" type="video/x-matroska">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
